@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--openSans);
+  overflow-x: hidden;
 }
 
 body > * {
@@ -26,7 +27,7 @@ body > * {
 .container {
   display: flex;
   justify-content: space-around;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -34,7 +35,11 @@ body > * {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 4rem;
+  padding-top: 3rem;
+}
+
+.logo {
+  width: 16rem;
 }
 
 .btn {
@@ -183,7 +188,11 @@ h1 {
 }
 
 .section img {
-  width: 30em;
+  width: 50%;
+}
+
+.textContent {
+  padding: 2rem;
 }
 
 h2 {
@@ -224,7 +233,7 @@ h2 {
 
 .footer .logo {
   filter: brightness(0) invert(1);
-  width: 12rem;
+  width: 12em;
   margin-bottom: 1rem;
 }
 
@@ -252,21 +261,22 @@ h2 {
 
 i {
   transform: scale(2);
+  z-index: 99;
 }
 
 h3 {
   font-family: var(--poppins);
-  font-size: 1.75rem;
+  font-size: 1.75em;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 
 .footerContent p {
-  font-size: 0.75rem;
+  font-size: 0.75em;
 }
 
 .footerContent:last-of-type p {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   max-width: 300px;
 }
 
@@ -293,4 +303,80 @@ button {
   color: white;
   font-weight: 600;
   width: 30%;
+}
+
+@media (max-width: 830px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .top .container,
+  .middle .container,
+  .bottom .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .lastCta {
+    text-align: center;
+  }
+
+  .containerGraphic {
+    margin-bottom: 8rem;
+  }
+
+  .top p,
+  .middle p,
+  .bottom p {
+    font-size: 1.5rem;
+  }
+
+  .statsWrapper,
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .statsIcon {
+    margin: 0 auto 2rem;
+  }
+
+  .statsIcon:last-of-type {
+    margin-top: 4rem;
+  }
+
+  .statNumber {
+    font-size: 4rem !important;
+  }
+
+  .section img {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 40%;
+    align-self: flex-end;
+  }
+
+  .footer {
+    font-size: 1.5rem;
+  }
+
+  .footer .container {
+    flex-direction: column-reverse;
+  }
+
+  .footerContent {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .footerContent:last-of-type {
+    margin-bottom: 6rem;
+  }
 }
